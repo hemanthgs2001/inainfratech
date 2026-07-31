@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body text-slate bg-paper antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+/* Blueprint grid texture used behind the hero section */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Slow pan + zoom applied to the hero background image, giving it quiet motion */
+@keyframes hero-drift {
+  0% {
+    transform: scale(1.08) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.16) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1.08) translate(0, 0);
+  }
+}
+.hero-bg-motion {
+  animation: hero-drift 22s ease-in-out infinite;
+}
+
+/* Diagonal cut divider used between sections, echoes a site-plan cut line */
+.cut-divider {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+}
+.cut-divider-top {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+
+.container-page {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-safety focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
