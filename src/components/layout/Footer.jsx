@@ -74,15 +74,23 @@ function Footer() {
           <ul className="space-y-3 text-sm text-white/60">
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 text-safety flex-shrink-0" />
-              <span>4th Floor, Marathon Business Hub, Baner Road, Pune, Maharashtra 411045</span>
+              <span>Floor No.: 1ST FLOOR
+Building No./Flat No.: NO 8
+Road/Street: 1ST MAIN III CROSS
+Nearby Landmark: PF OFFICE ROAD
+Locality/Sub Locality: DASANAYAKANAHA PALYA GORAGUNTEPALYA
+City/Town/Village: Bengaluru
+District: Bengaluru Urban
+State: Karnataka
+PIN Code: 560022</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-safety flex-shrink-0" />
-              <span>+91 98765 43210</span>
+              <span>9686000021</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-safety flex-shrink-0" />
-              <span>contact@inainfratech.com</span>
+              <span>inainfratech@gmail.com</span>
             </li>
           </ul>
         </div>

@@ -9,7 +9,15 @@ function ContactInfo() {
         <MapPin className="w-5 h-5 text-safety mt-0.5 flex-shrink-0" />
         <div>
           <p className="text-sm text-white/60 mb-1">Address</p>
-          <p className="text-sm">4th Floor, Marathon Business Hub, Baner Road, Pune, Maharashtra 411045</p>
+          <p className="text-sm">Floor No.: 1ST FLOOR
+Building No./Flat No.: NO 8
+Road/Street: 1ST MAIN III CROSS
+Nearby Landmark: PF OFFICE ROAD
+Locality/Sub Locality: DASANAYAKANAHA PALYA GORAGUNTEPALYA
+City/Town/Village: Bengaluru
+District: Bengaluru Urban
+State: Karnataka
+PIN Code: 560022</p>
         </div>
       </div>
 
@@ -17,7 +25,7 @@ function ContactInfo() {
         <Phone className="w-5 h-5 text-safety mt-0.5 flex-shrink-0" />
         <div>
           <p className="text-sm text-white/60 mb-1">Phone</p>
-          <p className="text-sm">+91 98765 43210</p>
+          <p className="text-sm">9686000021</p>
         </div>
       </div>
 
@@ -25,7 +33,7 @@ function ContactInfo() {
         <Mail className="w-5 h-5 text-safety mt-0.5 flex-shrink-0" />
         <div>
           <p className="text-sm text-white/60 mb-1">Email</p>
-          <p className="text-sm">contact@inainfratech.com</p>
+          <p className="text-sm">inainfratech@gmail.com</p>
         </div>
       </div>
 
