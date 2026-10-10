@@ -22,7 +22,7 @@ import {
   Twitter
 } from "lucide-react";
 
-const constructionUrl = "/construction";
+const constructionUrl ="https://www.inainfratech.com/construction";
 const softwareUrl = "https://software.inainfratech.com";
 const logoUrl = "/ina.png";
 

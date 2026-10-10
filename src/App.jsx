@@ -1,5 +1,5 @@
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import ParentHome from './pages/ParentHome.jsx';
 import Layout from './components/layout/Layout.jsx';
@@ -20,7 +20,10 @@ function App() {
 
       {/* Construction website */}
       <Route path="/construction" element={<Layout />}>
+        {/* Construction homepage */}
         <Route index element={<Home />} />
+
+        {/* Construction pages */}
         <Route path="services" element={<Services />} />
         <Route path="projects" element={<Projects />} />
         <Route path="blogs" element={<Blogs />} />
@@ -29,27 +32,39 @@ function App() {
         <Route path="contact" element={<Contact />} />
       </Route>
 
-      {/* Backward compatibility for existing links */}
-      <Route path="/services" element={<Layout />}>
-        <Route index element={<Services />} />
-      </Route>
+      {/* Redirect older links to the construction website */}
+      <Route
+        path="/services"
+        element={<Navigate to="/construction/services" replace />}
+      />
 
-      <Route path="/projects" element={<Layout />}>
-        <Route index element={<Projects />} />
-      </Route>
+      <Route
+        path="/projects"
+        element={<Navigate to="/construction/projects" replace />}
+      />
 
-      <Route path="/blogs" element={<Layout />}>
-        <Route index element={<Blogs />} />
-        <Route path=":id" element={<BlogDetail />} />
-      </Route>
+      <Route
+        path="/blogs"
+        element={<Navigate to="/construction/blogs" replace />}
+      />
 
-      <Route path="/testimonials" element={<Layout />}>
-        <Route index element={<Testimonials />} />
-      </Route>
+      <Route
+        path="/blogs/:id"
+        element={<Navigate to="/construction/blogs/:id" replace />}
+      />
 
-      <Route path="/contact" element={<Layout />}>
-        <Route index element={<Contact />} />
-      </Route>
+      <Route
+        path="/testimonials"
+        element={<Navigate to="/construction/testimonials" replace />}
+      />
+
+      <Route
+        path="/contact"
+        element={<Navigate to="/construction/contact" replace />}
+      />
+
+      {/* Unknown routes return to the parent homepage */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
